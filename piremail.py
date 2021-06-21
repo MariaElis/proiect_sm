@@ -22,12 +22,7 @@ while True:
 		new_state = "HIGH"
 		GPIO.setup(21,GPIO.OUT)
 		GPIO.output(21,1)
-	else:
-		new_state = "LOW"
-		GPIO.setup(21,GPIO.OUT)
-                GPIO.output(21,0)
-
-        print("GPIO pin %s is %s" % (PIRsensor, new_state))
+        
         import smtplib
  
         server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -37,3 +32,12 @@ while True:
         msg = "ALARM MOTION DETECTED!!!"  #message sent to the email address
         server.sendmail("jardamariaelisa@gmail.com", "elisa_jarda@yahoo.com", msg)
         server.quit()
+        
+	else:
+		new_state = "LOW"
+		GPIO.setup(21,GPIO.OUT)
+                GPIO.output(21,0)
+
+        print("GPIO pin %s is %s" % (PIRsensor, new_state))
+        
+        
