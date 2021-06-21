@@ -1,6 +1,7 @@
 ##import libraries
 import RPi.GPIO as GPIO
 import time
+import smtplib
 
 PIRsensor = 4  #PIR sensor attached to the GPIO4
 
@@ -23,7 +24,6 @@ while True:
 		GPIO.setup(21,GPIO.OUT)
 		GPIO.output(21,1)
         
-        	import smtplib
  
         	server = smtplib.SMTP('smtp.gmail.com', 587)
         	server.starttls()
