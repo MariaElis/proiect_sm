@@ -23,15 +23,15 @@ while True:
 		GPIO.setup(21,GPIO.OUT)
 		GPIO.output(21,1)
         
-        import smtplib
+        	import smtplib
  
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login("jardamariaelisa@gmail.com", "proiectsm")
+        	server = smtplib.SMTP('smtp.gmail.com', 587)
+        	server.starttls()
+        	server.login("jardamariaelisa@gmail.com", "proiectsm")
  
-        msg = "ALARM MOTION DETECTED!!!"  #message sent to the email address
-        server.sendmail("jardamariaelisa@gmail.com", "elisa_jarda@yahoo.com", msg)
-        server.quit()
+        	msg = "ALARM MOTION DETECTED!!!"  #message sent to the email address
+        	server.sendmail("jardamariaelisa@gmail.com", "elisa_jarda@yahoo.com", msg)
+        	server.quit()
         
 	else:
 		new_state = "LOW"
